@@ -1,3 +1,14 @@
+#  Tuliskan group dan anggotanya
+#  Tuliskan judul aplikasi
+# Tuliskan kegunaannya
+# tuliskan cara kerjanya
+
+
+
+
+
+
+
 # basic_app
 
 A new Flutter project.
