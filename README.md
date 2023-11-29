@@ -1,5 +1,10 @@
-#  Tuliskan group dan anggotanya
-#  Tuliskan judul aplikasi
+#   Grup C
+#   Anggota:
+#       Akmal Rafi Herliawan
+#       Rijal Rahman Zuhri 
+#       Muflihah Kamilia Firdaus
+
+#   Judul Aplikasi : ZUHRY INVENTORY
 # Tuliskan kegunaannya
 # tuliskan cara kerjanya
 
