@@ -1,12 +1,17 @@
 #   Grup C
-#   Anggota:
-#       Akmal Rafi Herliawan
-#       Rijal Rahman Zuhri 
-#       Muflihah Kamilia Firdaus
+   Anggota:
+       Akmal Rafi Herliawan
+       Rijal Rahman Zuhri 
+       Muflihah Kamilia Firdaus
 
-#   Judul Aplikasi : ZUHRY INVENTORY
-# Tuliskan kegunaannya
-# tuliskan cara kerjanya
+Judul Aplikasi : 
+ZUHRY INVENTORY
+
+#   Kegunaan:
+isi gais
+
+# Cara Kerja :
+isi juga gais
 
 
 
