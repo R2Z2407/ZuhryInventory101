@@ -1,10 +1,10 @@
 #   Grup C
    Anggota:
-       Akmal Rafi Herliawan
-       Rijal Rahman Zuhri 
-       Muflihah Kamilia Firdaus
+       Akmal Rafi Herliawan,
+       Rijal Rahman Zuhri, 
+       Muflihah Kamilia Firdaus,
 
-Judul Aplikasi : 
+#   Judul Aplikasi : 
 ZUHRY INVENTORY
 
 #   Kegunaan:
