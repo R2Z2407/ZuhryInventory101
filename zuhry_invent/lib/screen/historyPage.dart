@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:zuhry_invent/component/customSearch.dart';
 import 'package:zuhry_invent/component/ListviewSquare.dart';
 import 'package:zuhry_invent/component/customTopTitle.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
-import 'package:zuhry_invent/component/customSearch.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
@@ -40,11 +40,12 @@ class HistoryPage extends StatelessWidget {
         ),
         decoration: const BoxDecoration(color: Color(0x00000000)),
         child: Column(children: [
+          const SizedBox(height: 15),
           const TopTitle(
             thistext: 'History',
             thiscolor: Coolors.primary,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           CustomSearch(
             thistext: 'Cari peminjaman',
           ),
