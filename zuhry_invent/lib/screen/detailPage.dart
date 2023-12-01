@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zuhry_invent/screen/homePage.dart';
+import 'package:zuhry_invent/screen/ListLoan.dart';
+import 'package:zuhry_invent/component/customButton.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -11,6 +14,19 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   late bool is_onpress = true;
+  void value0() {}
+  int value = 0;
+  void add() {
+    setState(() {
+      value++;
+    });
+  }
+
+  void subtract() {
+    setState(() {
+      value--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -197,22 +213,79 @@ class _DetailPageState extends State<DetailPage> {
                           return Container(
                             padding: EdgeInsets.all(15),
                             color: Colors.white,
-                            height: 203,
+                            height: 209,
                             child: Column(children: [
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    height: 60,
-                                    width: 60,
-                                    color: Colors.grey,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text("Nama Barang"),
-                                  Container()
-                                ],
+                              Container(
+                                width: MediaQuery.of(context).size.width * 1,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      height: 60,
+                                      width: 60,
+                                      color: Colors.grey,
+                                    ),
+                                    Container(
+                                      width: 150,
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        "Nama Barang",
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.all(2),
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          border: Border.all()),
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width: 5),
+                                          SizedBox(
+                                            width: 30,
+                                            height: 30,
+                                            child: FittedBox(
+                                              child: FloatingActionButton.small(
+                                                backgroundColor: Coolors.second,
+                                                onPressed: () {
+                                                  subtract();
+                                                },
+                                                child: FaIcon(
+                                                  FontAwesomeIcons.minus,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(width: 10),
+                                          Text(
+                                            '$value',
+                                          ),
+                                          SizedBox(width: 10),
+                                          SizedBox(
+                                            width: 30,
+                                            height: 30,
+                                            child: FittedBox(
+                                              child: FloatingActionButton.small(
+                                                backgroundColor: Coolors.second,
+                                                onPressed: () {
+                                                  add();
+                                                },
+                                                child: FaIcon(
+                                                    FontAwesomeIcons.add),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                               SizedBox(
                                 height: 10,
@@ -232,22 +305,14 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Container(
-                                      width: 100,
+                                    CustomButton(
+                                      text: 'Pinjam',
                                       height: 40,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
-                                        color: Coolors.primary,
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      child: ElevatedButton(onPressed: , child: Text(
-                                        "Pinjam",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: "Nunito",
-                                            fontSize: 16),
-                                      ),)
-                                    ),
+                                      width: 100,
+                                      onPressed: () =>
+                                          Navigator.popAndPushNamed(
+                                              context, Loanlist.routeName),
+                                    )
                                   ])
                             ]),
                           );
