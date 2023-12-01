@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zuhry_invent/screen/detailPage.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
 
 class GaleryPage extends StatelessWidget {
@@ -13,13 +14,19 @@ class GaleryPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
         ),
         child: ClipRRect(
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
-              border: Border.all(
-                color: Coolors.second,
-                width: 1,
+          child: InkWell(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (Context) => DetailPage()));
+            },
+            child: Ink(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(
+                  color: Coolors.second,
+                  width: 1,
+                ),
               ),
             ),
           ),
