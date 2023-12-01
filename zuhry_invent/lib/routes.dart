@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:zuhry_invent/screen/homePage.dart';
+import 'package:zuhry_invent/screen/ListLoan.dart';
 import 'package:zuhry_invent/screen/loginPage.dart';
 import 'package:zuhry_invent/screen/notifPage.dart';
 import 'package:zuhry_invent/screen/signUpPage.dart';
@@ -15,4 +16,5 @@ final Map<String, WidgetBuilder> routes = {
   LoginPage.routeName: (context) => LoginPage(),
   NotifPage.routeName: (context) => NotifPage(),
   DetailPage.routeName: (context) => DetailPage(),
+  Loanlist.routeName: (context) => Loanlist(),
 };
