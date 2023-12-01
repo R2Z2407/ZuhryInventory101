@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zuhry_invent/screen/galeryPage.dart';
-import 'package:zuhry_invent/component/customTopTitle.dart';
 import 'package:zuhry_invent/component/customSearch.dart';
+import 'package:zuhry_invent/component/customTopTitle.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
 
 class InventoryPage extends StatelessWidget {
@@ -21,15 +21,18 @@ class InventoryPage extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 30,
-          vertical: 15,
+          vertical: 10,
         ),
         decoration: _boxDecoration(),
         child: Column(children: [
+          SizedBox(
+            height: 15,
+          ),
           const TopTitle(
             thistext: 'Zuhry Inventory',
             thiscolor: Colors.white,
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           CustomSearch(thistext: 'Cari Barang'),
         ]),
       ),
