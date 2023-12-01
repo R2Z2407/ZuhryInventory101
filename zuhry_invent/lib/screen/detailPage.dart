@@ -23,6 +23,9 @@ class _DetailPageState extends State<DetailPage> {
   }
 
   void subtract() {
+    if (value < 1) {
+      return;
+    }
     setState(() {
       value--;
     });
