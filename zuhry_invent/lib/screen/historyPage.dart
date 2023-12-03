@@ -24,7 +24,7 @@ class HistoryPage extends StatelessWidget {
           itemCount: _histories.length,
           itemBuilder: (context, index) {
             return MySquare(
-              child: _histories[index],
+              Subject: _histories[index],
             );
           }),
     );
