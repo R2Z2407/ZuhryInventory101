@@ -3,11 +3,14 @@ import 'package:zuhry_invent/common/utils/custom_colors.dart';
 
 class MySquare extends StatelessWidget {
   final String Subject;
-  final String Date;
-  final String Keterangan;
+  //final String Date;
+  //final String Keterangan;
 
-  MySquare(
-      {required this.Keterangan, required this.Subject, required this.Date});
+  MySquare({
+    //required this.Keterangan,
+    required this.Subject,
+    //required this.Date
+  });
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -46,25 +49,25 @@ class MySquare extends StatelessWidget {
                       fontSize: 21,
                       color: Coolors.primary),
                 ),
-                Text(
-                  Date,
-                  style: TextStyle(
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w700,
-                      fontSize: 21,
-                      color: Coolors.primary),
-                )
+                //Text(
+                //    Date,
+                //    style: TextStyle(
+                //        fontFamily: 'Nunito',
+                //        fontWeight: FontWeight.w700,
+                //        fontSize: 21,
+                //        color: Coolors.primary),
+                //  )
               ],
             ),
             Divider(
               thickness: 2,
             ),
-            Text(Keterangan,
-                style: TextStyle(
-                    fontFamily: 'Nunito',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    color: Coolors.primary)),
+            //Text(Keterangan,
+            //    style: TextStyle(
+            //        fontFamily: 'Nunito',
+            //        fontWeight: FontWeight.w700,
+            //        fontSize: 14,
+            //        color: Coolors.primary)),
           ],
         ),
       ),
