@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zuhry_invent/Data/database.dart';
 import 'package:zuhry_invent/screen/galeryPage.dart';
 import 'package:zuhry_invent/component/customSearch.dart';
 import 'package:zuhry_invent/component/customTopTitle.dart';
@@ -11,7 +12,14 @@ class InventoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBars(),
-      body: const GaleryPage(),
+      body: ListView.builder(
+          itemCount: inventoryPage.length,
+          itemBuilder: (context, index) {
+            return GaleryPage(
+              Subject: inventoryPage[index].subject,
+              image: inventoryPage[index].image,
+            );
+          }),
     );
   }
 
