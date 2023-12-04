@@ -33,7 +33,7 @@ class NotifPage extends StatelessWidget {
       preferredSize: Size.fromHeight(50),
       child: Container(
         padding: const EdgeInsets.symmetric(
-          horizontal: 30,
+          horizontal: 60,
           vertical: 15,
         ),
         decoration: const BoxDecoration(color: Color(0x00000000)),

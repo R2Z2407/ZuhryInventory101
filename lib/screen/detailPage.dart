@@ -1,11 +1,10 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:zuhry_invent/screen/homePage.dart';
 import 'package:zuhry_invent/screen/ListLoan.dart';
 import 'package:zuhry_invent/component/customButton.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:zuhry_invent/component/countItem.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -16,22 +15,6 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   late bool is_onpress = true;
-  int value = 0;
-  void add() {
-    setState(() {
-      value++;
-    });
-  }
-
-  void subtract() {
-    if (value < 1) {
-      return;
-    }
-    setState(() {
-      value--;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -222,15 +205,16 @@ class _DetailPageState extends State<DetailPage> {
                               Container(
                                 width: MediaQuery.of(context).size.width * 1,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
+                                    SizedBox(width: 2),
                                     Container(
                                       height: 60,
                                       width: 60,
                                       color: Colors.grey,
                                     ),
+                                    SizedBox(width: 15),
                                     Container(
                                       width: 150,
                                       alignment: Alignment.centerLeft,
@@ -239,6 +223,7 @@ class _DetailPageState extends State<DetailPage> {
                                         textAlign: TextAlign.start,
                                       ),
                                     ),
+                                    new Spacer(),
                                     Container(
                                       padding: EdgeInsets.all(2),
                                       decoration: BoxDecoration(
@@ -246,46 +231,7 @@ class _DetailPageState extends State<DetailPage> {
                                               BorderRadius.circular(10),
                                           border: Border.all()),
                                       child: Row(
-                                        children: [
-                                          SizedBox(width: 5),
-                                          SizedBox(
-                                            width: 30,
-                                            height: 30,
-                                            child: FittedBox(
-                                              child: FloatingActionButton.small(
-                                                backgroundColor: Coolors.second,
-                                                onPressed: () {
-                                                  subtract();
-                                                },
-                                                child: FaIcon(
-                                                  FontAwesomeIcons.minus,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          SizedBox(width: 10),
-                                          Text(
-                                            '$value',
-                                          ),
-                                          SizedBox(width: 10),
-                                          SizedBox(
-                                            width: 30,
-                                            height: 30,
-                                            child: FittedBox(
-                                              child: FloatingActionButton.small(
-                                                backgroundColor: Coolors.second,
-                                                onPressed: () {
-                                                  add();
-                                                },
-                                                child: FaIcon(
-                                                    FontAwesomeIcons.add),
-                                              ),
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 5,
-                                          ),
-                                        ],
+                                        children: [CountItem()],
                                       ),
                                     )
                                   ],

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:zuhry_invent/Data/database.dart';
-import 'package:zuhry_invent/screen/gridview.dart';
+// import 'package:zuhry_invent/screen/gridview.dart';
 
 class GridviewPage extends StatelessWidget {
   final List Barang = [
-    gvpg(Subject: 'Resistor', Image: 'assets/database/resistor.png'),
-    gvpg(Subject: 'Resistor', Image: 'assets/database/resistor.png'),
+    gvpg('Resistor', 'assets/database/resistor.png'),
+    gvpg('Resistor', 'assets/database/resistor.png'),
   ];
   GridviewPage({super.key});
   @override

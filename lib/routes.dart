@@ -7,6 +7,9 @@ import 'package:zuhry_invent/screen/signUpPage.dart';
 import 'package:zuhry_invent/screen/detailPage.dart';
 import 'package:zuhry_invent/screen/profilePage.dart';
 import 'package:zuhry_invent/screen/historyPage.dart';
+import 'package:zuhry_invent/component/countItem.dart';
+import 'package:zuhry_invent/component/customCheckbox.dart';
+import 'package:zuhry_invent/component/listPinjam.dart';
 
 final Map<String, WidgetBuilder> routes = {
   HomePage.routeName: (context) => HomePage(),
@@ -17,4 +20,6 @@ final Map<String, WidgetBuilder> routes = {
   NotifPage.routeName: (context) => NotifPage(),
   DetailPage.routeName: (context) => DetailPage(),
   Loanlist.routeName: (context) => Loanlist(),
+  CountItem.routeName: (context) => CountItem(),
+  CountItem.routeName: (context) => CustomCB(),
 };

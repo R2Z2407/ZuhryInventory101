@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zuhry_invent/screen/ListLoan.dart';
 import 'package:zuhry_invent/screen/notifPage.dart';
 
 class TopTitle extends StatelessWidget {
@@ -42,7 +43,7 @@ class TopTitle extends StatelessWidget {
             height: 20,
             width: 20,
           ),
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, Loanlist.routeName),
         ),
       ],
     );

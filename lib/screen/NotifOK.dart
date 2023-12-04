@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zuhry_invent/Data/database.dart';
+// import 'package:zuhry_invent/Data/database.dart';
 import 'package:zuhry_invent/screen/detailPage.dart';
 import 'package:zuhry_invent/common/utils/custom_colors.dart';
 
